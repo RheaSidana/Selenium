@@ -4,6 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import sampleapp.implementations.Assignment1;
 import sampleapp.implementations.InputTags;
 import sampleapp.implementations.MouseAndKeyboardEvents;
 
@@ -32,17 +33,39 @@ public class Assignments {
 
         driver.manage().window().maximize();
 
-        callTestTextBox();
+//        callTestTextBox();
+//        callTestCheckBox();
+//        callTestRadioButton();
+//        callTestDropdown();
 //        callMouseAndKeyboardEvents();
+
+        callAssignment1();
 
         driver.quit();
     }
 
+    private static void callAssignment1(){
+        Assignment1 assignment = new Assignment1(driver);
+        assignment.solution();
+    }
+
     private static void callTestTextBox() {
         InputTags inputTags = new InputTags(driver);
-//        inputTags.testTextBox();
-//        inputTags.testCheckBox();
-//        inputTags.testRadioButton();
+        inputTags.testTextBox();
+    }
+
+    private static void callTestCheckBox(){
+        InputTags inputTags = new InputTags(driver);
+        inputTags.testCheckBox();
+    }
+
+    private static void callTestRadioButton(){
+        InputTags inputTags = new InputTags(driver);
+        inputTags.testRadioButton();
+    }
+
+    private static void callTestDropdown(){
+        InputTags inputTags = new InputTags(driver);
         inputTags.testDropdown();
     }
 
