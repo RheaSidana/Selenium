@@ -4,10 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import sampleapp.implementations.Assignment1;
-import sampleapp.implementations.FileUpload;
-import sampleapp.implementations.InputTags;
-import sampleapp.implementations.MouseAndKeyboardEvents;
+import sampleapp.implementations.*;
 
 import java.awt.*;
 
@@ -42,9 +39,19 @@ public class Assignments {
 //        callTestDropdown();
 //        callMouseAndKeyboardEvents();
 //        callAssignment1();
-        callFileUploadMethods();
+//        callFileUploadMethods();
+        callAlerts();
 
         driver.quit();
+    }
+
+    private static void callAlerts(){
+        Alerts alerts = new Alerts(driver);
+
+//        alerts.simpleAlert();
+//        alerts.confirmationAlertAccept();
+//        alerts.confirmationAlertDismiss();
+        alerts.promptAlert();
     }
 
     private static void callFileUploadMethods(){
