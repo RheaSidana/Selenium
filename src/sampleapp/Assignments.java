@@ -40,9 +40,19 @@ public class Assignments {
 //        callMouseAndKeyboardEvents();
 //        callAssignment1();
 //        callFileUploadMethods();
-        callAlerts();
+//        callAlerts();
+        callSwitchingWindow();
 
         driver.quit();
+    }
+
+    private static void callSwitchingWindow(){
+        SwitchingWindows sw = new SwitchingWindows(driver);
+//        sw.openAndSwitchToNewWindow();
+//        sw.openAndSwitchToNewTab();
+//        sw.openMultipleWindows();
+//        sw.openMultipleTabs();
+        sw.openMultipleTabsAndWindows();
     }
 
     private static void callAlerts(){
