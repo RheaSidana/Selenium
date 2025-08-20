@@ -5,8 +5,11 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import sampleapp.implementations.Assignment1;
+import sampleapp.implementations.FileUpload;
 import sampleapp.implementations.InputTags;
 import sampleapp.implementations.MouseAndKeyboardEvents;
+
+import java.awt.*;
 
 public class Assignments {
     private static WebDriver driver;
@@ -31,17 +34,29 @@ public class Assignments {
 //        setFirefoxDriver();
 //        setEdgeDriver();
 
-        driver.manage().window().maximize();
+//        driver.manage().window().maximize();
 
 //        callTestTextBox();
 //        callTestCheckBox();
 //        callTestRadioButton();
 //        callTestDropdown();
 //        callMouseAndKeyboardEvents();
-
-        callAssignment1();
+//        callAssignment1();
+        callFileUploadMethods();
 
         driver.quit();
+    }
+
+    private static void callFileUploadMethods(){
+        FileUpload fileUpload = new FileUpload(driver);
+
+//        fileUpload.fileUploadUsingSendKey();
+        try{
+            fileUpload.fileUploadUsingJSExecutor();
+        }
+        catch (AWTException ex){
+
+        }
     }
 
     private static void callAssignment1(){
